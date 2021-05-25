@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
+from chatapp.views import abrir_conexion, administrar_conexion
+
 
 urlpatterns = [
     path('chat/', include('chatapp.urls')),
     path('admin/', admin.site.urls),
+    path('abrir/', abrir_conexion),
+    path('administrar/', administrar_conexion)
 ]
