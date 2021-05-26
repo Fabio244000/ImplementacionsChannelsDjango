@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#AGRENADO DIRECTORIO DE RECURSOS
+STATICFILES_DIRS = ['/home/fabio/Documentos/Channel with Django/chatserver/chatapp/templates/static']
+
 
 # Application definition
 

@@ -1,0 +1,32 @@
+.forma{
+
+    background: cornsilk;
+    margin-left: 5%;
+    width: 500px;
+    height: 500px;
+    border-radius: 30px;
+    border: rgb(179, 12, 179) solid;
+}
+h1{
+    text-align: center;
+    height: 100%;
+    border-radius:30px;
+    background-color: rgb(179, 12, 179);
+    color: white;
+    
+
+}
+p{
+    text-align: center;
+    color: white;
+}
+button{
+    margin-left: 40%;
+}
+.form-group{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+input{
+    box-shadow: rgb(179, 12, 179);
+}

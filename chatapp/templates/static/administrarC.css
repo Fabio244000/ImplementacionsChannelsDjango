@@ -1,0 +1,38 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #b1bcd3;  /* fallback for old browsers */
+    
+}
+.contentido{
+    margin: 0px 20px 20px 20px;
+
+
+}
+.tabla{
+
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.botones{
+    
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-left: 10%;
+}
+h2{
+    text-align: center;
+    color: black;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+.encabezado{
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10px;
+    background: #b8891bf8;
+    
+
+}
