@@ -1,7 +1,9 @@
+
 from django.contrib import admin
-from chatapp.models import *
+from .models import *
 
 admin.site.register(Cliente)
 admin.site.register(Salachat)
-admin.site.register(Operdador)
+admin.site.register(Empleado)
 admin.site.register(Mensaje)
+admin.site.register(Usuario)
