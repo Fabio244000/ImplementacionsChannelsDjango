@@ -22,6 +22,6 @@ from chatapp.views import abrir_conexion, administrar_conexion
 urlpatterns = [
     path('chat/', include('chatapp.urls')),
     path('admin/', admin.site.urls),
-    path('abrir/', abrir_conexion),
-    path('administrar/', administrar_conexion)
+    path('abrir/', abrir_conexion, name='abrir conexion'),
+    path('administrar/', administrar_conexion, name= 'administrar conexion')
 ]

@@ -15,6 +15,6 @@ def abrir_conexion(request):
 
 def administrar_conexion(request):
     conexiones =['Nombre usuario','example@gmail.com',123456789]
-    return render(request, 'administrarConexion.html',{'conexiones':conexiones})
+    return render(request, 'adminConexion.html',{'conexiones':conexiones})
 
 # Create your views here.
