@@ -2,7 +2,14 @@ from django.http import request
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'chat/index.html')
+    #validamos datos del cliente
+    #obtenemos el nombre del operador en secion designado
+    #genera nombre de la sala
+    nombre_sala = 'fabio_operador'
+    print(nombre_sala)
+    return render(request, 'abrirConexion.html',{'nombre_sala':nombre_sala})
+
+    
 
 def room(request, room_name):
     return render(request, 'chat/room.html', {

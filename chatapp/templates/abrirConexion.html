@@ -20,12 +20,13 @@
 </head>
 <body>
     <div class="forma">
-        <form action="" method="POST"">
+        <form action="" method="POST">
+            {% csrf_token %}
             <h1 style="color: rgba(0, 0, 0, 0.835);">Atencion al cliente Nvio</h1>
             <p>Ingresar sus datos para continuar: </p>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nombre</label>
-                <input type="text" class="form-control" id="nombre_usuario"  placeholder="Ingresar nombre">
+                <input type="text" class="form-control" id="nombre_usuario"  placeholder="Ingresar nombre" value="{{nombre_sala}}">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
@@ -35,7 +36,22 @@
                 <label for="exampleInputEmail1">Celular</label>
                 <input type="text" class="form-control" id="celular_usuario"  placeholder="Ingresar num. celular">
             </div>
-            <button type="submit" class="btn btn-primary" style="background-color: rgb(179, 12, 179); border: none;">Continuar</button>
+            <button id="room-name-submit" type="submit" class="btn btn-primary" style="background-color: rgb(179, 12, 179); border: none;">Continuar</button>
+            
+            <script>
+                document.querySelector('#nombre_usuario').focus();
+                //validamos los datos del usuario
+                document.querySelector('#nombre_usuario').onkeyup = function(e) {
+                    if (e.keyCode === 13) {  // enter, return
+                        document.querySelector('#room-name-submit').click();
+                    }
+                };
+        
+                document.querySelector('#room-name-submit').onclick = function(e) {
+                    var roomName = document.querySelector('#nombre_usuario').value+'=algo';
+                    window.location.pathname = '/chat/' + roomName + '/';
+                };
+            </script>
         </form>
     </div>
 </body>
