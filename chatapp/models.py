@@ -3,6 +3,9 @@ from django.db.models.base import Model
 from django.db.models.deletion import CASCADE, PROTECT
 from django.contrib import admin
 from django.db.models.fields import CharField
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 #Estamos declarando los modelos Operador, Cliente, Salachatn usuario, estamos normalizando 
 class Usuario(models.Model):
@@ -50,11 +53,15 @@ class Salachat(models.Model):
 
 class Mensaje(models.Model):
     contenido = models.TextField(max_length=300)#base de datos no relacional
-    emisor = models.ForeignKey(Usuario, on_delete=PROTECT)
+    emisor = models.ForeignKey(User, related_name='autor_mensage', on_delete=CASCADE)
     fecha_hora = models.DateTimeField()
     sala = models.ForeignKey(Salachat, on_delete=CASCADE)
     #crear una clase intermedia
 
     def __str__(self) :
-        return '%s %s' % (self.emisor, self.contenido)
+        return self.emisor.username
+
+    def ultimos_10_mensajes(self):
+        return Mensaje.objects.order_by('-').all('-fecha_hora')[:10]
+
 

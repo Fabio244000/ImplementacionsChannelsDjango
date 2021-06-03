@@ -7,7 +7,7 @@ def index(request):
     #genera nombre de la sala
     nombre_sala = 'fabio_operador'
     print(nombre_sala)
-    return render(request, 'abrirConexion.html',{'nombre_sala':nombre_sala})
+    return render(request, 'chat/index.html',{'nombre_sala':nombre_sala})
 
     
 
