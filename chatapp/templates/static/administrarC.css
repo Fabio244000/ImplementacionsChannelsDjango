@@ -3,26 +3,14 @@ body{
     background: white; 
     
 }
-.contentido{
-    margin: 0px 20px 20px 20px;
 
-
-}
-.tabla{
-
-    margin-left: 15%;
-    margin-right: 15%;
-}
 .botones{
     
     margin-left: 35%;
     margin-right: 35%;
     padding-left: 10%;
 }
-h2{
-    text-align: center;
-    color: black;
-}
+
 p{
     text-align: center;
     font-size: 25px;
